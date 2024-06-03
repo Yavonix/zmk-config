@@ -45,7 +45,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
             &kp B      &kp L      &kp D      &kp C      &kp V          &kp J      &kp F      &kp O      &kp U      &kp COMMA
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  N       │  R       │  T       │  S       │  G       │   │  Y       │  H       │  A       │  E       │  I       │
-      &hml LGUI N  &hml LALT R  &hml LSHIFT  T &hml LCTRL S  &kp G    &kp Y     &hmr LCTRL N &hmr RSHFT A &hmr LALT E &hmr LGUI I
+      &hml LGUI N  &hml LALT R  &hml LSHIFT  T &hml LCTRL S  &kp G    &kp Y     &hmr LCTRL H &hmr RSHFT A &hmr LALT E &hmr LGUI I
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  X       │  Q       │  M       │  W       │  Z       │   │  K       │  P       │ ' "      │  ; :     │ . >      │
             &kp X      &kp Q      &kp M      &kp W      &kp Z          &kp K      &kp P      &kp SQT    &kp SEMI   &kp DOT
