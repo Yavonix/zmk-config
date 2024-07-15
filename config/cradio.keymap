@@ -79,7 +79,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
             &kp INS    &kp N7     &kp N8     &kp N9     &kp PG_UP      &kp HOME   &kp LBRC  &kp RBRC   &kp LPAR    &kp RPAR
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ DELETE   │  4       │  5       │  6       │ PAGE DN  │   | LEFT     │ DOWN     │ UP       │ RIGHT    │  END     │
-            &kp DEL    &kp N4  &hml LSHIFT N5 &hml LCTRL N6 &kp PG_DN      &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp END
+            &kp DEL    &kp N4  &hml LSHIFT N5 &hml LCTRL N6 &kp PG_DN      &kp LARW &hmr LCTRL DARW &hmr RSHFT UARW   &kp RARW   &kp END
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CAPS     │  1       │  2       │  3       │  0       │   │          │ [        │ ]        │ =        │          │
            &caps_word  &kp N1     &kp N2     &kp N3     &kp N0         &trans     &kp LBKT   &kp RBKT   &kp EQUAL     &trans
@@ -96,7 +96,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
             &trans     &kp TILDE  &kp QMARK  &kp COLON   &kp AMPS      &kp UNDER     &kp FSLH   &kp BSLH   &kp CARET   &kp PIPE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  !       │  @       │  #       │  $       │  %       │   │  *       │  -       │  =       │  +       │  `       │
-            &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp ASTRK  &kp MINUS  &kp EQUAL  &kp PLUS   &kp GRAVE
+            &kp EXCL   &kp AT     &hml LSHIFT HASH &hml LCTRL DLLR   &kp PRCNT      &kp ASTRK  &kp MINUS  &kp EQUAL  &kp PLUS   &kp GRAVE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
             &trans     &trans     &trans     &trans     &trans         &trans     &trans    &trans      &trans    &trans
