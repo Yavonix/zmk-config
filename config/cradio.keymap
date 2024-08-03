@@ -41,6 +41,10 @@ MAKE_HRM_NO_HOLD(hmln, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS_L)  // right-hand HRMs
 MAKE_HRM_NO_HOLD(hmrn, &kp, &kp, KEYS_L THUMBS_L)  // right-hand HRMs
 
+&lt {
+    quick-tap-ms = <QUICK_TAP_MS>;
+};
+
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
