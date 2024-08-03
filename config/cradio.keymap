@@ -14,13 +14,14 @@
 #define THUMBS LH0 LH1 RH0 RH1  // thumb keys
 
 #define QUICK_TAP_MS 175
+#define REQUIRE_PRIOR_IDLE_MS 200 // 150
 
 #define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS) \
     ZMK_HOLD_TAP(NAME, \
         flavor = "hold-preferred"; \
         tapping-term-ms = <240>; \
         quick-tap-ms = <QUICK_TAP_MS>; \
-        require-prior-idle-ms = <150>; \
+        require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>; \
         bindings = <HOLD>, <TAP>; \
         hold-trigger-key-positions = <TRIGGER_POS>; \
         hold-while-undecided; \
@@ -31,7 +32,7 @@
         flavor = "hold-preferred"; \
         tapping-term-ms = <240>; \
         quick-tap-ms = <QUICK_TAP_MS>; \
-        require-prior-idle-ms = <150>; \
+        require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>; \
         bindings = <HOLD>, <TAP>; \
         hold-trigger-key-positions = <TRIGGER_POS>; \
     )
