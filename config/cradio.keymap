@@ -14,11 +14,11 @@
 #define THUMBS LH0 LH1 RH0 RH1  // thumb keys
 
 #define QUICK_TAP_MS 175
-#define REQUIRE_PRIOR_IDLE_MS 200 // 150
+#define REQUIRE_PRIOR_IDLE_MS 150 // 150
 
 #define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS) \
     ZMK_HOLD_TAP(NAME, \
-        flavor = "hold-preferred"; \
+        flavor = "balanced"; \
         tapping-term-ms = <240>; \
         quick-tap-ms = <QUICK_TAP_MS>; \
         require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>; \
@@ -29,7 +29,7 @@
 
 #define MAKE_HRM_NO_HOLD(NAME, HOLD, TAP, TRIGGER_POS) \
     ZMK_HOLD_TAP(NAME, \
-        flavor = "hold-preferred"; \
+        flavor = "balanced"; \
         tapping-term-ms = <240>; \
         quick-tap-ms = <QUICK_TAP_MS>; \
         require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>; \
@@ -129,7 +129,7 @@ MAKE_HRM_NO_HOLD(hmrn, &kp, &kp, KEYS_L THUMBS_L)  // right-hand HRMs
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          |          │   │          │          │          │          │          │
-           &trans     &kp F7     &kp F8     &kp F9    &kp F12         &kp C_BRI_UP &kp C_VOL_UP &kp C_PLAY     &trans    &trans
+           &tog 5     &kp F7     &kp F8     &kp F9    &kp F12         &kp C_BRI_UP &kp C_VOL_UP &kp C_PLAY     &trans    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          |          |
           &kp LSHIFT   &kp F4     &kp F5     &kp F6    &kp F11        &kp C_BRI_DN &kp C_VOL_DN &kp C_PAUSE     &trans    &trans
@@ -146,17 +146,34 @@ MAKE_HRM_NO_HOLD(hmrn, &kp, &kp, KEYS_L THUMBS_L)  // right-hand HRMs
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │  RESET   │
-           &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0    &trans     &trans     &trans     &trans    &sys_reset
+           &trans  &trans     &trans     &trans    &bt BT_SEL 0          &trans     &trans     &trans     &trans    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
           &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
-            &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans
+            &sys_reset     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &sys_reset
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
+        };
+
+        game_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│          │          │          │          │          │   │          │          │          │          │          │
+           &tog 5        &kp Q     &kp W     &kp E   &kp R             &kp T     &kp Y     &kp U     &kp I    &kp O
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │          │          │          │   │          │          │          │          │          │
+          &kp LSHIFT     &kp S     &kp A     &kp D    &kp F           &kp G     &kp H     &kp J     &kp K    &kp L
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │          │          │          │   │          │          │          │          │          │
+         &kp LCTRL     &kp  Z     &kp X    &kp C       &kp V          &kp B     &kp N     &pk M     &kp P     &trans
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &lt 1 ESC     &kp SPACE         &trans     &trans
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >; 
         };
     };
 };
