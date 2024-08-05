@@ -53,12 +53,21 @@ MAKE_HRM_NO_HOLD(hmrn, &kp, &kp, KEYS_L THUMBS_L)  // right-hand HRMs
         combo_lws {
             timeout-ms = <50>;
             key-positions = <LM4 LM2>;
-            bindings = <&kp LGUI &kp LSHIFT>;
+            bindings = <&macro_lgui_lshift>;
         };
         combo_rws {
             timeout-ms = <50>;
             key-positions = <RM4 RM2>;
-            bindings = <&kp LGUI &kp LSHIFT>;
+            bindings = <&macro_lgui_lshift>;
+        };
+    };
+
+    macros {
+        macro_lgui_lshift: macro_lgui_lshift {
+            label = "Macro LGUI+LSHIFT";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LGUI>, <&macro_press &kp LSHIFT>;
         };
     };
 
