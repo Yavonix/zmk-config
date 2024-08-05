@@ -169,7 +169,7 @@ MAKE_HRM_NO_HOLD(hmrn, &kp, &kp, KEYS_L THUMBS_L)  // right-hand HRMs
           &kp LSHIFT     &kp S     &kp A     &kp D    &kp F           &kp G     &kp H     &kp J     &kp K    &kp L
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-         &kp LCTRL     &kp  Z     &kp X    &kp C       &kp V          &kp B     &kp N     &pk M     &kp P     &trans
+         &kp LCTRL     &kp  Z     &kp X    &kp C       &kp V          &kp B     &kp N     &kp M     &kp P     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &lt 1 ESC     &kp SPACE         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
