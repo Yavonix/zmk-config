@@ -47,8 +47,7 @@ MAKE_HRM_NO_HOLD(hmrn, &kp, &kp, KEYS_L THUMBS_L)  // right-hand HRMs
 };
 
 
-
-/ {
+/ { 
     combos {
         compatible = "zmk,combos";
         combo_lws {
@@ -62,9 +61,7 @@ MAKE_HRM_NO_HOLD(hmrn, &kp, &kp, KEYS_L THUMBS_L)  // right-hand HRMs
             bindings = <&kp LGUI &kp LSHIFT>;
         };
     };
-};
 
-/ {
     conditional_layers {
         compatible = "zmk,conditional-layers";
         comb_layer {
