@@ -67,7 +67,7 @@ MAKE_HRM_NO_HOLD(hmrn, &kp, &kp, KEYS_L THUMBS_L)  // right-hand HRMs
             label = "Macro LGUI+LSHIFT";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LGUI>, <&macro_press &kp LSHIFT>;
+            bindings = <&macro_press &kp LGUI>, <&macro_press &kp LSHIFT>, <&macro_pause_for_release>, <&macro_release &kp LSHIFT>, <&macro_release &kp LGUI>;
         };
     };
 
