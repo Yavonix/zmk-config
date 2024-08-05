@@ -46,6 +46,24 @@ MAKE_HRM_NO_HOLD(hmrn, &kp, &kp, KEYS_L THUMBS_L)  // right-hand HRMs
     quick-tap-ms = <QUICK_TAP_MS>;
 };
 
+
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+        combo_lws {
+            timeout-ms = <50>;
+            key-positions = <LM0 LM3>;
+            bindings = <&kp LGUI &kp LSHIFT>;
+        };
+        combo_rws {
+            timeout-ms = <50>;
+            key-positions = <RM0 RM3>;
+            bindings = <&kp LGUI &kp LSHIFT>;
+        };
+    };
+};
+
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
