@@ -13,8 +13,9 @@
 #define THUMBS_R RH0 RH1  // thumb keys 
 #define THUMBS LH0 LH1 RH0 RH1  // thumb keys
 
-#define QUICK_TAP_MS 175
-#define REQUIRE_PRIOR_IDLE_MS 150 // 150
+#define QUICK_TAP_MS 175 // 175
+#define REQUIRE_PRIOR_IDLE_MS 100 // 150
+#define COMBO_TIMEOUT_MS 35 // 50
 
 #define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS) \
     ZMK_HOLD_TAP(NAME, \
@@ -51,12 +52,12 @@ MAKE_HRM_NO_HOLD(hmrn, &kp, &kp, KEYS_L THUMBS_L)  // right-hand HRMs
     combos {
         compatible = "zmk,combos";
         combo_lws {
-            timeout-ms = <50>;
+            timeout-ms = <COMBO_TIMEOUT_MS>;
             key-positions = <LM4 LM2>;
             bindings = <&macro_lgui_lshift>;
         };
         combo_rws {
-            timeout-ms = <50>;
+            timeout-ms = <COMBO_TIMEOUT_MS>;
             key-positions = <RM4 RM2>;
             bindings = <&macro_lgui_lshift>;
         };
